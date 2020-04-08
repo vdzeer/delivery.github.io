@@ -237,6 +237,7 @@ body {
 }
 
 .item-link {
+    position: relative;
     text-decoration: none;
     font-style: normal;
     font-weight: normal;
@@ -244,6 +245,26 @@ body {
     line-height: 21px;
     color: #595959;
     padding-right: 15px;
+}
+
+.item-link::after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    background: #595959;
+    width: 0px;
+    height: 2px;
+    left: 0;
+    bottom: -2px;
+}
+
+.item-link:hover::after {
+    width: 87%;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
 }
 
 .footer-contacts {
