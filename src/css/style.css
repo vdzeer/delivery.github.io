@@ -99,7 +99,8 @@ body {
 .section-heading {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0 20px 0;
 }
 
 .heading-title {
@@ -107,6 +108,8 @@ body {
     font-weight: bold;
     font-size: 36px;
     line-height: 42px;
+    margin-right: 30px;
+    
 }
 
 .input-search {
@@ -114,6 +117,7 @@ body {
     background: url(../img/search.svg);
     background-repeat: no-repeat;
     background-position: left 10px center;
+    margin-left: auto;
 }
 
 .cards {
@@ -130,11 +134,25 @@ body {
     overflow: hidden;
     margin-bottom: 30px;
     flex-basis: 31%;
+    text-decoration: none;
+}
+.card:visited {
+    color: #000;
 }
 .card-img {
     object-fit: cover;
 }
-
+.card-info-heading{
+    display: flex;
+    align-items: center;
+}
+.card-info-ingr {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #8C8C8C;
+}
 .card-heading {
     display: flex;
     align-items: center;
@@ -142,13 +160,32 @@ body {
     padding: 20px 24px 10px 24px;
 }
 
+.card-text {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 35px 24px;
+}
 .card-title {
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 32px;
 }
-
+.card-title-pro {
+    font-size: 22px;
+    font-weight: 400;
+}
+.card-buttons {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+.card-btn-text {
+    margin-right: 10px;
+}
+.card-btn-price {
+    margin-left: 32px;
+}
 .tag {
     padding: 1px 8px;
     background: #262626;
@@ -366,10 +403,6 @@ body {
     .btn-text {
         display: none;
     }
-    .section-heading {
-        justify-content: none;
-        flex-wrap: wrap;
-    }
     .heading-title {
         font-size: 40px;
         margin-bottom: 10px;
@@ -384,10 +417,13 @@ body {
     .card-info {
         flex-wrap: wrap;
     }
-    .card-info-rating {
+    .card .card-info-rating {
         flex-basis: 100%;
     }
     .card-info-price, .card-info-text {
         font-size: 16px;
+    }
+    .card-btn-text, .card-btn-price {
+        font-size: 14px;
     }
 }
