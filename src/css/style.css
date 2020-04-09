@@ -28,7 +28,7 @@ body {
 }
 
 .input-adress {
-    width: 690px;
+    flex: 0.8;
     background-image: url(../img/home.svg);
     background-repeat: no-repeat;
     background-position: left 10px center;
@@ -110,7 +110,7 @@ body {
 }
 
 .input-search {
-    width: 306px;
+    flex: 0.3;
     background: url(../img/search.svg);
     background-repeat: no-repeat;
     background-position: left 10px center;
@@ -129,6 +129,7 @@ body {
     border-radius: 7px;
     overflow: hidden;
     margin-bottom: 30px;
+    flex-basis: 31%;
 }
 .card-img {
     object-fit: cover;
@@ -269,4 +270,124 @@ body {
 
 .contact-link {
     padding-left: 21px;
+}
+
+@media (max-width: 1330px) {
+    .container {
+        max-width: 1100px;
+    }
+}
+
+@media (max-width: 1186px) {
+    .container {
+        max-width: 900px;
+    }
+    .promo {
+        background-size: 400px;
+        background-position: right -100px bottom -100px;
+    }
+    .card {
+        flex-basis: 49%;
+    }
+    .card-img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 996px) {
+    .container {
+        max-width: 756px;
+    }
+    .promo {
+        background-size: 300px;
+        background-position: right -70px center;
+        padding: 60px;
+    }
+    .promo-title {
+        font-size: 34px;
+    }
+    .promo-text {
+        font-size: 20px;
+        max-width: 450px;
+    }
+    .footer-block {
+        flex-direction: column;
+    }
+    .footer-contacts {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 796px) {
+    .container {
+        max-width: 500px;
+    }
+    .header {
+        flex-wrap: wrap;
+    }
+    .input-adress {
+        margin-top: 10px;
+        order: 5;
+        flex: 1;
+    }
+    .promo {
+        background-image: none;
+        padding: 50px;
+    }
+    .promo-text {
+        font-size: 18px;
+    }
+    .card {
+        flex-basis: 100%;
+    }
+    .list {
+        display: flex;
+        flex-direction: column;
+    }
+    .list-item {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 505px) {
+    .container {
+        width: 85%;
+    }
+    .promo {
+        padding: 30px;
+    }
+    .promo-title {
+        font-size: 26px;
+        line-height: 1.4;
+    }
+    .promo-text {
+        font-size: 16px;
+    }
+    .btn-text {
+        display: none;
+    }
+    .section-heading {
+        justify-content: none;
+        flex-wrap: wrap;
+    }
+    .heading-title {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    .input-search {
+        flex: 1;
+        margin-bottom: 20px;
+    }
+    .card-title {
+        font-size: 20px;
+    }
+    .card-info {
+        flex-wrap: wrap;
+    }
+    .card-info-rating {
+        flex-basis: 100%;
+    }
+    .card-info-price, .card-info-text {
+        font-size: 16px;
+    }
 }
