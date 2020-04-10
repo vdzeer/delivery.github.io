@@ -490,6 +490,10 @@ body {
     .list-item {
         margin-bottom: 5px;
     }
+    .modal-block {
+        max-height: 1000px;
+        height: 96%;
+    }
 }
 
 @media (max-width: 505px) {
@@ -534,10 +538,6 @@ body {
     }
     .modal-title{
         font-size: 22px;
-    }
-    .modal-block {
-        max-height: 1000px;
-        height: 96%;
     }
     .modal-row {
         flex-wrap: wrap;
