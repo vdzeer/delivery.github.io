@@ -56,6 +56,9 @@ body {
     display: flex;
     align-items: center;
 }
+.btn:hover {
+    cursor: pointer;
+}
 
 .btn-primary {
     margin-right: 10px;
@@ -309,6 +312,109 @@ body {
     padding-left: 21px;
 }
 
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.activeModal {
+    display: flex;
+}
+.modal-block {
+    max-width: 780px;
+    width: 95%;
+    background: #FFFFFF;
+    border-radius: 5px;
+    margin: auto;
+    padding: 45px 40px;
+    overflow: auto;
+}
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+.modal-title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+}
+.close {
+    border: none;
+    background: transparent;
+    font-size: 36px;
+}
+.close:hover {
+    cursor: pointer;
+}
+.modal-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+
+}
+.row-text {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+}
+.row-price {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+    margin-left: auto;
+    margin-right: 47px;
+}
+.row-buttons {
+    display: flex;
+    align-items: center;
+}
+.row-counter {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.row-btn {
+    background: #FFFFFF;
+    border: 1px solid #40A9FF;
+    box-sizing: border-box;
+    border-radius: 2px;
+    color: #40A9FF;
+    font-size: 14px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+}
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.price-tag {
+    background: #262626;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+}
+.modal-footer-btn {
+    display: flex;
+    align-items: center;
+}
+
+
 @media (max-width: 1330px) {
     .container {
         max-width: 1100px;
@@ -425,5 +531,41 @@ body {
     }
     .card-btn-text, .card-btn-price {
         font-size: 14px;
+    }
+    .modal-title{
+        font-size: 22px;
+    }
+    .modal-block {
+        max-height: 1000px;
+        height: 96%;
+    }
+    .modal-row {
+        flex-wrap: wrap;
+    }
+    .row-buttons {
+        display: flex;
+        width: 100%;
+        margin-top: 10px;
+        justify-content: space-between;
+    }
+    .row-price {
+        margin: auto;
+    }
+    .modal-footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:466px) {
+    .modal-footer {
+        justify-content: center;
+    }
+    .modal-footer-btn {
+        margin-top: 15px;
+    }
+    .modal-footer-btn .btn {
+        font-size: 13px;
+        height: 42px;
     }
 }

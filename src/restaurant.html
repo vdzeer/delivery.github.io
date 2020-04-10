@@ -7,6 +7,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -21,7 +22,7 @@
                     <img src="img/user.svg" alt="user" class="btn-img">
                     <span class="btn-text">Войти</span>
                 </button>
-                <button class="btn">
+                <button class="btn" id="btn-cont">
                     <img src="img/cont.svg" alt="cont" class="btn-img">
                     <span class="btn-text">Корзина</span>
                 </button>
@@ -41,7 +42,7 @@
                     </div>
                 </div>
                 <div class="cards">
-                    <div class="card">
+                    <div class="card wow fadeInLeft" data-wow-delay="0.2s">
                         <img src="img/card-product1.jpg" alt="Продукт 1" class="card-img">
                         <div class="card-heading">
                             <span class="card-title card-title-pro">Ролл угорь стандарт</span>
@@ -58,7 +59,7 @@
                         </div>
                     </div>
     
-                    <div class="card">
+                    <div class="card wow fadeInLeft" data-wow-delay="0.25s">
                         <img src="img/card-product2.jpg" alt="Продукт 2" class="card-img">
                         <div class="card-heading">
                             <span class="card-title card-title-pro">Калифорния лосось стандарт</span>
@@ -75,7 +76,7 @@
                         </div>
                     </div>
     
-                    <div class="card">
+                    <div class="card wow fadeInLeft" data-wow-delay="0.3s">
                         <img src="img/card-product3.jpg" alt="Продукт 3" class="card-img">
                         <div class="card-heading">
                             <span class="card-title card-title-pro">Окинава стандарт</span>
@@ -92,7 +93,7 @@
                         </div>
                     </div>
     
-                    <div class="card">
+                    <div class="card wow fadeInLeft" data-wow-delay="0.2s">
                         <img src="img/card-product4.jpg" alt="Продукт 4" class="card-img">
                         <div class="card-heading">
                             <span class="card-title card-title-pro">Цезарь маки хl</span>
@@ -109,7 +110,7 @@
                         </div>
                     </div>
     
-                    <div class="card">
+                    <div class="card wow fadeInLeft" data-wow-delay="0.25s">
                         <img src="img/card-product5.jpg" alt="Продукт 5" class="card-img">
                         <div class="card-heading">
                             <span class="card-title card-title-pro">Ясай маки стандарт 185 г</span>
@@ -126,7 +127,7 @@
                         </div>
                     </div>
     
-                    <div class="card">
+                    <div class="card wow fadeInLeft" data-wow-delay="0.3s">
                         <img src="img/card-product6.jpg" alt="Продукт 6" class="card-img">
                         <div class="card-heading">
                             <span class="card-title card-title-pro">Ролл с креветкой стандарт</span>
@@ -166,5 +167,69 @@
             </div>
         </div>
     </footer>
+    <div class="modal">
+        <div class="modal-block">
+            <div class="modal-header">
+                <span class="modal-title">Корзина</span>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-list">
+                <div class="modal-row">
+                    <div class="row-text">Ролл угорь стандарт</div>
+                    <div class="row-price">250 ₽</div>
+                    <div class="row-buttons">
+                        <button class="btn row-btn">-</button>
+                        <span class="row-counter">1</span>
+                        <button class="btn row-btn">+</button>
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div class="row-text">Ролл угорь стандарт</div>
+                    <div class="row-price">250 ₽</div>
+                    <div class="row-buttons">
+                        <button class="btn row-btn">-</button>
+                        <span class="row-counter">1</span>
+                        <button class="btn row-btn">+</button>
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div class="row-text">Ролл угорь стандарт</div>
+                    <div class="row-price">250 ₽</div>
+                    <div class="row-buttons">
+                        <button class="btn row-btn">-</button>
+                        <span class="row-counter">1</span>
+                        <button class="btn row-btn">+</button>
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div class="row-text">Ролл угорь стандарт</div>
+                    <div class="row-price">250 ₽</div>
+                    <div class="row-buttons">
+                        <button class="btn row-btn">-</button>
+                        <span class="row-counter">1</span>
+                        <button class="btn row-btn">+</button>
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div class="row-text">Ролл угорь стандарт</div>
+                    <div class="row-price">250 ₽</div>
+                    <div class="row-buttons">
+                        <button class="btn row-btn">-</button>
+                        <span class="row-counter">1</span>
+                        <button class="btn row-btn">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="price-tag">1250 ₽</div>
+                <div class="modal-footer-btn">
+                    <button class="btn btn-primary">Оформить заказ</button>
+                    <button class="btn" id="closeBtn">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
