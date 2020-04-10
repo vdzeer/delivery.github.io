@@ -359,7 +359,7 @@ body {
     border-bottom: 1px solid #D9D9D9;
     padding-bottom: 8px;
     margin-bottom: 10px;
-
+    overflow: hidden;
 }
 .row-text {
     font-weight: normal;
@@ -459,6 +459,10 @@ body {
     .footer-contacts {
         margin-top: 10px;
     }
+    .modal-block {
+        max-height: 1000px;
+        height: 96%;
+    }
 }
 
 @media (max-width: 796px) {
@@ -489,10 +493,6 @@ body {
     }
     .list-item {
         margin-bottom: 5px;
-    }
-    .modal-block {
-        max-height: 1000px;
-        height: 96%;
     }
 }
 
@@ -554,6 +554,10 @@ body {
     .modal-footer {
         display: flex;
         flex-wrap: wrap;
+    }
+    .modal-block {
+        max-height: 1000px;
+        height: 96%;
     }
 }
 
