@@ -459,10 +459,6 @@ body {
     .footer-contacts {
         margin-top: 10px;
     }
-    .modal-block {
-        max-height: 1000px;
-        height: 96%;
-    }
 }
 
 @media (max-width: 796px) {
