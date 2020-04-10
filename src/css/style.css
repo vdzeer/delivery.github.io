@@ -552,7 +552,6 @@ body {
         flex-wrap: wrap;
     }
     .modal-block {
-        max-height: 1000px;
         height: 96%;
     }
 }
