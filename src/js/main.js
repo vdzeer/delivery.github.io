@@ -30,6 +30,18 @@ let login = localStorage.getItem('acc');
 
 const cart = [];
 
+const loadCart = function () {
+  if (localStorage.getItem(login)){
+    JSON.parse(localStorage.getItem(login)).forEach(function(item) {
+      cart.push(item);
+    });
+  }
+}
+
+const saveCart = function () {
+  localStorage.setItem(login, JSON.stringify(cart));
+};
+
 const getData = async function(url) {
   const response = await window.fetch(url);
   if (!response.ok) {
@@ -56,7 +68,7 @@ function authorized() {
   function logOut() {
     login = null;
     localStorage.removeItem('acc');
-
+    cart.length = 0;
     buttonAuth.style.display = '';
     userName.style.display = '';
     buttonOut.style.display = '';
@@ -72,6 +84,7 @@ function authorized() {
   buttonOut.style.display = 'flex';
   cartButton.style.display = 'flex';
   buttonOut.addEventListener('click', logOut);
+  loadCart();
 }
 
 function notAuthorized() {
@@ -234,6 +247,7 @@ function addToCart(event) {
       });
     }
   }
+  saveCart();
 }
 
 function renderCard() {
@@ -242,7 +256,7 @@ function renderCard() {
     const itemCart = `
       <div class="food-row">
         <span class="food-name">${title}</span>
-        <strong class="food-price">${cost} ₽</strong>
+        <strong class="food-price">${cost}</strong>
         <div class="food-counter">
           <button class="counter-button counter-minus" data-id=${id}>-</button>
           <span class="counter">${count}</span>
@@ -280,7 +294,7 @@ function changeCount(event) {
 
     renderCard();
   }
-
+  saveCart();
 }
 
 function init() {
