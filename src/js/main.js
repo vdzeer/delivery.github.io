@@ -251,7 +251,7 @@ function renderCard() {
       </div>
     `;
 
-    modalBody.insertAdjacentHTML('afterbegin', itemCard);
+    modalBody.insertAdjacentHTML('afterbegin', itemCart);
   });
 
   const totalPrice = cart.reduce(function(result, item) {
